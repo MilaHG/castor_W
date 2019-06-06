@@ -1,0 +1,17 @@
+<h1>Books#index</h1>
+<p>Find me in app/views/books/index.html.erb</p>
+
+<!-- afficher la liste des livres-->
+
+<ul>
+  <% @books.each do |livre| %>
+    <li><%= livre.title %></li>
+  <% end %>
+</ul>
+
+<!--Formulaire HTML-->
+<!--<form action="/books" method="post">-->
+<%= form_tag "/books", method: "post" do %>
+  <input type="text" name="title" />
+  <input type="submit" value="Ajouter le livre" />
+<% end %>
